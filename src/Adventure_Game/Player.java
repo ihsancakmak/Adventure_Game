@@ -5,7 +5,7 @@ public class Player extends Character{
     Character hero;
 
     void heroSpecs(){
-        System.out.println("Hero's specs: Weapon= "+ hero.weaponName+","+" Power= "+ hero.getCharDamage()+","+" Health= "+ hero.getCharHealth()+","+" Shield= "+ hero.armorName+","+" Protection= "+ hero.getArmorProtection());
+        System.out.println("Hero's specs: Weapon= "+ hero.weaponName+","+" Power= "+ hero.getCharDamage()+","+" Health= "+ hero.getCharHealth()+","+" Shield= "+ hero.armorName+","+" Protection= "+ hero.getArmorProtection()+","+" Coin= "+hero.getCharCoin());
     }
 
 }

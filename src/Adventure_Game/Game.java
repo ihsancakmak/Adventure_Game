@@ -51,8 +51,23 @@ public class Game extends Player{
         }
         player.heroSpecs();
 
+        System.out.println();
+        System.out.println("########## MAP ##########");
+        System.out.println();
+        System.out.println("1- Safe House ---> This place is safe and there is no monster here.");
+        System.out.println("2- Tool Store ---> You can buy weapon or armor.");
+        System.out.println("3- Cave ---> Be careful! You may encounter zombies.");
+        System.out.println("4- Forest ---> Be careful! You may encounter vampires.");
+        System.out.println("5- River ---> Be careful! You may encounter bears.");
+        System.out.println("0- Quit ---> Quit game.");
+        System.out.println("Please choose where you want to go.");
+        int environmentId = in.nextInt();
 
+        switch (environmentId){
+            case 1 -> {
 
+            }
+        }
 
 
 
