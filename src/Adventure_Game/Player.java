@@ -1,7 +1,7 @@
 package Adventure_Game;
 
 public class Player extends Character{
-
+    String prizes[] = new String[3];
     int health;
     int coin;
     String name;
