@@ -1,4 +1,5 @@
 package Adventure_Game;
+import javax.swing.plaf.ScrollPaneUI;
 import java.util.Random;
 import java.util.Scanner;
 
@@ -306,12 +307,15 @@ public class Game extends Character{
                 toolStore();
                 break;
             case 3:
+                player.location = 3;
                 handleLocation("Zombie", 1, 3, 10, 4);
                 break;
             case 4:
+                player.location = 4;
                 handleLocation("Vampire", 2, 4, 14, 7);
                 break;
             case 5:
+                player.location = 5;
                 handleLocation("Bear", 3, 7, 20, 12);
                 break;
             default:
@@ -334,6 +338,31 @@ public class Game extends Character{
                 for (int i = 1; i <= numOfMonsters; i++) {
                     Character monster = new Character(monsterType + i, level, damage, health, reward);
                     fight(player, monster);
+                }
+                if(player.location == 3){
+                    System.out.println();
+                    System.out.println("Congrats!!! You killed all the monsters in Cave and you collected the prize Food.");
+                    player.prizes[0] = "Food";
+                }
+                if(player.location == 4){
+                    System.out.println();
+                    System.out.println("Congrats!!! You killed all the monsters in Cave and you collected the prize Wood.");
+                    player.prizes[1] = "Wood";
+                }
+                if(player.location == 5){
+                    System.out.println();
+                    System.out.println("Congrats!!! You killed all the monsters in Cave and you collected the prize Water.");
+                    player.prizes[2] = "Water";
+                }
+                if(player.prizes[0] == "Food" && player.prizes[1] == "Wood" && player.prizes[2] == "Water"){
+                    System.out.println();
+                    System.out.println("----------CONGRATULATIONS!!! YOU WON THE GAME----------");
+                    System.out.println("Do you want to play again?(y/n)");
+                    String again = in.next();
+                    if(again.equals("y")){
+                        gameStart();
+                    }
+                    else System.exit(0);
                 }
                 break;
             } else if (choice.equalsIgnoreCase("e")) {
